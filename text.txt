@@ -1,0 +1,191 @@
+const user = document.getElementById("user");
+const pass = document.getElementById("pass");
+const box = document.getElementById("box");
+
+box.onchange = function(e) {
+    pass.type = box.checked ? "text" : "password";
+};
+
+else if (user.value.length =0) {
+            user_error;
+            user.focus();
+            return false;
+        } else if(pass.value.length =0) {
+            pass_error;
+            pass.focus();
+            return false;
+
+            <div id="user_error">Please fill up your Username</div>
+            <div id="pass_error">Please fill up your Password</div>
+            .login #user_error, #pass_error {
+    display: flex;
+    margin-top: -27px;
+    width: 345px;
+    font-size: 18px;
+    color: #C62828;
+    background: rgba(255, 0, 0, 0.1);
+    padding: 0 8px;
+    border-radius: 3px;
+    border: 1px solid #EF9A;
+}
+
+.logo {
+    font-size: 2em;
+    color: #ffecec;
+    user-select: none;
+}
+
+.main .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: black;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-botto-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Store</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    <header>
+        <h1>Game Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#action">Action</a></li>
+                <li><a href="#adventure">Adventure</a></li>
+                <li><a href="#rpg">RPG</a></li>
+                <li><a href="#simulation">Simulation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="action">
+            <h2>Action Games</h2>
+            <ul>
+                <li><a href="https://www.epicgames.com/fortnite/">Fortnite</a></li>
+                <li><a href="https://www.blizzard.com/en-us/games/overwatch/">Overwatch</a></li>
+                <li><a href="https://playovercooked.com/">Overcooked</a></li>
+            </ul>
+        </section>
+
+        <section id="adventure">
+            <h2>Adventure Games</h2>
+            <ul>
+                <li><a href="https://www.rockstargames.com/V/">Red Dead Redemption 2</a></li>
+                <li><a href="https://www.ubisoft.com/en-US/game/the-witcher-3-wild-hunt/">The Witcher 3: Wild Hunt</a></li>
+                <li><a href="https://www.monsterenergy.com/pages/adventure-series">Monster Energy: Gravity Rush</a></li>
+            </ul>
+        </section>
+
+        <section id="rpg">
+            <h2>RPG Games</h2>
+            <ul>
+                <li><a href="https://www.capcom.com/rpg_experience/sengoku_basara/">Sengoku Basara</a></li>
+                <li><a href="https://www.square-enix.com/en_US/games/ffxv/">Final Fantasy XV</a></li>
+                <li><a href="https://store.steampowered.com/app/464920/Dungeon_Crawl_Stone_Soup/">Dungeon Crawl: Stone Soup</a></li>
+            </ul>
+        </section>
+
+        <section id="simulation">
+            <h2>Simulation Games</h2>
+            <ul>
+                <li><a href="https://www.minecraft.net/">Minecraft</a></li>
+                <li><a href="https://www.tamiasoft.com/farming-simulator/">Farming Simulator</a></li>
+                <li><a href="https://www.epicgames.com/fortnite/">Skyrim</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2022 Game Store. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    padding: 20px;
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    margin-bottom: 10px;
+}
+
+section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section li {
+    margin-bottom: 10px;
+}
+
+section a {
+    color: #333;
+    text-decoration: none;
+}
+
+section a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #4CAF50;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
