@@ -3,10 +3,56 @@ body {
     padding: 0%;
     margin: 0;
     min-height: 100vh;
-    justify-content: center;
-    align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background: url(loginbg.jpeg) no-repeat;
+    background: url(profilebg.webp) no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.team {
+    margin: 75px 0;
+}
+
+h1 {
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    padding-bottom: 10px;
+}
+
+h1::after {
+    content: '';
+    background: #ffffff;
+    display: block;
+    height: 3px;
+    width: 150px;
+    margin: 10px auto;
+}
+
+h3, h2, h5 {
+    color: #ffffff;
+}
+
+.profile {
+    margin-top: 25px;
+}
+
+.profile .img-box{
+    opacity: 1;
+    display: block;
+    position: relative;
+}
+
+.profile h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.profile h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 15px;
 }

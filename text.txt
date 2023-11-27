@@ -189,3 +189,72 @@ footer {
     color: white;
 }
 
+    <div class="bg">
+        <h2>Welcome to Mema gawa</h2>
+    </div>s
+
+
+.bg {
+    display: flex;
+    position: absolute;
+    justify-content: right;
+    height: 35vh;
+    width: 65vh;
+    top: 30vh;
+    left: 100vh;
+    overflow: hidden;
+}
+
+.bg h2 {
+    text-align: center;
+    font-size: 70px;
+    font-style: italic;
+    color: white;    
+}
+
+
+const user = document.getElementById("user")
+const pass = document.getElementById("pass")
+const form = document.getElementById('form')
+const error = document.getElementById('error')
+
+form.addEventListener('button', (e) => {
+    let messages = []
+    if (user.value === '' || user.value ==null) {
+        messages.push('Username is required')
+    }
+
+    if (password.value.length <= 3) {
+        messages.push('Password must be longer than 3 characters')
+    }
+
+    if (password.value.length >= 10) {
+        messages.push('Password must be less than 10 characters')
+    }
+
+    if (messages.length > 0 ) {
+        e.preventDefault()
+        error.innerText = messages.join (', ')
+    }
+})
+
+
+var timer;
+
+(function () {
+    var sec = 0;
+    timer = setInterval(()=> {
+        sec++;
+    }, 1000)
+})()
+
+form label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #ffffff;
+    transform: translateY(-50%);
+    font-size: 17px;
+    pointer-events: none;
+    transition: .5s;
+}

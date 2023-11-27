@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background: url(loginbg.jpeg) no-repeat;
+    background: url(loginbg.webp) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -71,30 +71,12 @@ header {
     color: rgb(255, 255, 255);
 }
 
-.bg {
-    display: flex;
-    position: absolute;
-    justify-content: right;
-    height: 35vh;
-    width: 65vh;
-    top: 30vh;
-    left: 100vh;
-    overflow: hidden;
-}
-
-.bg h2 {
-    text-align: center;
-    font-size: 70px;
-    font-style: italic;
-    color: white;    
-}
-
 .main {
     position: relative;
     height: 15cm;
     width: 12cm;
     border: 2px solid rgb(158, 156, 156);
-    backdrop-filter: blur(7px);
+    backdrop-filter: blur(13px);
     background: transparent;
     border-radius: 15px;
     justify-content: center;
@@ -129,7 +111,7 @@ header {
     transform: translateX(0);
 }
 .main.active {
-    height: 18.5cm;
+    height: 18cm;
     width: 14cm;
     top: 30px;
 }
@@ -141,7 +123,7 @@ header {
 .form h1 {
     font-size: 2em;
     text-align: center;
-    padding: 5px 0 0px 0;
+    padding: 3px 0 0px 0;
     color: rgb(210, 210, 210);
 }
 
@@ -183,7 +165,7 @@ header {
 
 .txt_input {
     position: relative;
-    border-bottom: 2px solid #adadad;
+    border-bottom: 2px solid #ffffff;
     margin: 50px 0;
 }
 
@@ -202,7 +184,7 @@ header {
     position: absolute;
     top: 50%;
     left: 5px;
-    color: #adadad;
+    color: #ffffff;
     transform: translateY(-50%);
     font-size: 17px;
     pointer-events: none;
@@ -216,14 +198,14 @@ header {
     left: 0;
     width: 0%;
     height: 2px;
-    background: #ffecec;
+    background: #949494;
     transition: .5s;
 }
 
 .txt_input input:focus ~ label,
 .txt_input input:valid ~ label {
     top: -5px;
-    color: #ffecec;
+    color: #ffffff;
 }
 
 .txt_input input:focus ~ span::before,

@@ -3,28 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Pacman</title>
+    <link rel="stylesheet" href="loginpage.css">
+    <link rel="icon" href="logo.png" type="image/x-icon">
 </head>
 <body>
     <header>
         <img src="">
         <nav class="navi">
-            <a href="index.html">Home</a>
+            <a href="loginpage.html">Home</a>
             <a href="profile.html">About us</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+            <a href="contact.html">Contact</a>
             <button class="btn">Login</button>
         </nav>
     </header>
-    <div class="bg">
-        <h2>Welcome to Mema gawa</h2>
-    </div>
     <div class="main">
         <div class="form login">
             <h1>Login</h1>
 
-          <form action="#">
+          <form id="form" method="GET" action="/">
             <div class="txt_input" id="input">
                 <input type="text" required id="user" name="username">
                 <span></span>
@@ -39,6 +36,7 @@
                 <!--i class="fa-regular fa-eye"></i>
                 <i class="fa-regular fa-eye-slash"></i-->
             </div>
+            <div id="error"></div>
                 
             <div class="forgotp">
                 <a href="#">Forgot password?</a>
