@@ -100,3 +100,60 @@ signuplink.addEventListener('click', ()=> {
 var entrycount = 0;
 var timer = 59;
 var countdown = document.getElementById('btn');
+
+let eyeicon = document.getElementById("eyeicon");
+let pass = document.getElementById("pass");
+
+eyeicon.onclick = function() {
+    if (pass.type == "password") {
+        pass.type = "text";
+        eyeicon.src = "/img/eye-open.svg";
+    }
+    else {
+        pass.type = "password";
+        eyeicon.src = "/img/eye-close.svg";
+    }
+}
+
+const contain = document.querySelector('Tutorial');
+const tutbtn = document.querySelector('tutbtn');
+
+
+tutbtn.addEventListener('click', ()=> {
+    contain.classList.add('active');
+});
+
+/* Login Account */
+var userAcc =[
+    {
+        user:"..",
+        pass:""
+    },
+    {
+        user:"Kertz",
+        pass:"kertz"
+    }
+]
+var entrycount = 0;
+var entrylimit = 3;
+
+function enter() {
+    const user = document.getElementById("user").value;
+    const pass = document.getElementById("password").value;
+
+    for(i = 1; i < userAcc.length; i++) {
+            
+        if (user == userAcc[i].user && pass == userAcc[i].pass) {
+            window.location.href="homepage.html"; 
+        }
+
+        else if (user !== userAcc[i].user && pass !== userAcc[i].pass) {
+            window.alert('The Username or Password is invalid');
+            entrycount++
+        }
+        if (entrycount >= entrylimit) {
+            window.alert('You have reached the 3 attempts limit! \nPlease try again later.');
+            cd();
+        }
+    }
+}

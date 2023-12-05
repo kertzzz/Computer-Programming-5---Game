@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login System</title>
+</head>
+<body>
+    <h2>Login Form</h2>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required><br>
+
+        <button type="button" onclick="login()" id="loginButton">Login</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        let attempts = 3;
+        let lockoutTime = 60; // in seconds
+        let locked = false;
+        let countdown;
+        let loginButton = document.getElementById('loginButton');
+
+        function login() {
+            if (locked) {
+                showMessage(`Account locked. Please try again after ${lockoutTime} seconds.`);
+                startCountdown();
+                return;
+            }
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Check username and password (replace this with your authentication logic)
+            if (username === 'demo' && password === 'password') {
+                showMessage('Login successful!');
+            } else {
+                attempts--;
+
+                if (attempts === 0) {
+                    locked = true;
+                    startCountdown();
+                    loginButton.style.display = 'none'; // Hide the button when locked
+                }
+
+                showMessage(`Incorrect credentials. ${attempts} attempts left.`);
+            }
+        }
+
+        function showMessage(message) {
+            document.getElementById('message').innerText = message;
+        }
+
+        function startCountdown() {
+            countdown = lockoutTime;
+            const countdownInterval = setInterval(() => {
+                showMessage(`Account locked. Please try again after ${countdown} seconds.`);
+                countdown--;
+
+                if (countdown < 0) {
+                    locked = false;
+                    attempts = 3;
+                    showMessage('Account unlocked. You can try again.');
+                    clearInterval(countdownInterval);
+                    loginButton.style.display = 'block'; // Bring back the button when unlocked
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login System</title>
+</head>
+<body>
+    <h2>Login Form</h2>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required><br>
+
+        <button type="button" onclick="login()">Login</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        let attempts = 3;
+        let lockoutTime = 60; // in seconds
+        let locked = false;
+        let countdown;
+
+        function login() {
+            if (locked) {
+                showMessage(`Account locked. Please try again after ${lockoutTime} seconds.`);
+                startCountdown();
+                return;
+            }
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Check username and password (replace this with your authentication logic)
+            if (username === 'demo' && password === 'password') {
+                showMessage('Login successful!');
+            } else {
+                attempts--;
+
+                if (attempts === 0) {
+                    locked = true;
+                    startCountdown();
+                }
+
+                showMessage(`Incorrect credentials. ${attempts} attempts left.`);
+            }
+        }
+
+        function showMessage(message) {
+            document.getElementById('message').innerText = message;
+        }
+
+        function startCountdown() {
+            countdown = lockoutTime;
+            const countdownInterval = setInterval(() => {
+                showMessage(`Account locked. Please try again after ${countdown} seconds.`);
+                countdown--;
+
+                if (countdown < 0) {
+                    locked = false;
+                    attempts = 3;
+                    showMessage('Account unlocked. You can try again.');
+                    clearInterval(countdownInterval);
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

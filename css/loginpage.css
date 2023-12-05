@@ -115,6 +115,22 @@ header {
     position: relative;
 }
 
+.txt_input i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+p {
+    position: relative;
+    color: white;
+    margin-left: 10px;
+}
+
 .box a {
     color: #c0bfbf;
     text-decoration: none;

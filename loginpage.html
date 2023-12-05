@@ -6,6 +6,7 @@
     <title>Pacman</title>
     <link rel="stylesheet" href="/css/loginpage.css">
     <link rel="icon" href="/img/gamelogo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/7b1ce9f98a.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -29,12 +30,10 @@
             </div>
                 
             <div class="txt_input" id="input">
-                <!--i class="fa-regular fa-key"></i-->
-                <input type="password" required id="pass" name="password">
-                <span></span>
-                <label>Password</label>
-                <!--i class="fa-regular fa-eye"></i>
-                <i class="fa-regular fa-eye-slash"></i-->
+                <input type="password" required id="password" name="password">
+                    <i class="fa-regular fa-eye-slash" id="showpass"></i>  
+                    <span></span>
+                <label>Password</label>              
             </div>
             <div id="error"></div>
                 
@@ -43,6 +42,7 @@
             </div>
             
             <input type="button" value="Login" id="btn" onclick="enter()">
+            <p id="text_message"></p>
                 
             <div class="signup">
                 <label>Don't have an account?</label>
@@ -51,8 +51,6 @@
           </form>
         </div> 
     </div>
-    <script src="/js/code.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="/js/login.js"></script>
 </body>
 </html>

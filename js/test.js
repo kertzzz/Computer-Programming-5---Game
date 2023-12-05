@@ -1,18 +1,27 @@
-const startingMinutes = 1; 
-let time = startingMinutes * 60;
+let attempts = 3;
+let locked = false;
 
-const countdown = document.getElementById('btn');
+function login(username, password) {
+  if (locked) {
+    console.log("Account is locked. Please try again later.");
+    return;
+  }
 
-setInterval(cd, 900);
-function cd() {
-    let seconds = time % 60;
-    
-    seconds = seconds < 0 ? + seconds : seconds;
-
-    countdown.innerHTML = `${seconds}`;
-    time--;
-
-    if(countdown <= 0) {
-        close;
+  // Check username and password
+  if (username === "yourUsername" && password === "yourPassword") {
+    console.log("Login successful");
+  } else {
+    attempts--;
+    if (attempts > 0) {
+      console.log("Login failed. You have " + attempts + " attempts left.");
+    } else {
+      locked = true;
+      console.log("Too many failed attempts. Account locked for 1 minute.");
+      setTimeout(() => {
+        locked = false;
+        attempts = 3;
+        console.log("Account unlocked. You can try to login again.");
+      }, 60000); // 1 minute lock
     }
+  }
 }
