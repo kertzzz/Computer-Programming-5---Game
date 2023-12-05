@@ -26,14 +26,12 @@ let locked = false;
 let countdown;
 let button = document.getElementById('btn');
 
-
 function enter() {
     if (locked) {
-        showMessage(`Account locked. Please try again after ${locktime} seconds.`);
+        showMessage(`Login locked. Please try again after ${locktime} seconds.`);
         startCountdown();
         return;
     }
-
 
 const user = document.getElementById('user').value;
 const password = document.getElementById('password').value;
@@ -56,7 +54,7 @@ const password = document.getElementById('password').value;
 function startCountdown() {
     countdown = locktime;
     const countdownInterval = setInterval(() => {
-        showMessage(`Account locked. Please try again after ${countdown} seconds.`);
+        showMessage(`Login locked. Please try again after ${countdown} seconds.`);
         countdown--;
 
         if (countdown < 0) {
@@ -71,12 +69,6 @@ function startCountdown() {
 
 function showMessage(message) {
     document.getElementById('text_message').innerText = message;
-}
-
-
-/* Game button */
-function Play() {
-    window.location.href="game.html";
 }
 
 

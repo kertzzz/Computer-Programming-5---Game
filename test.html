@@ -3,74 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login System</title>
+    <title>About us</title>
+    <link rel="Stylesheet" href="/css/profile.css">
+    <link rel="icon" href="/img/gamelogo.png" type="image/x-icon">
 </head>
 <body>
-    <h2>Login Form</h2>
-    <form id="loginForm">
-        <label for="username">Username:</label>
-        <input type="text" id="username" required><br>
+    <section class="team">
+        <div class="container">
+            <h1>Our Team</h1>
+            <div class="row">
+                <div class="col profile text-center">
+                    <div class="img-box">
+                        <img src="/img/prof1.jpg" class="img">
+                    </div>
+                    <h2>John Kert Ouano</h2>
+                    <h3>Group Leader</h3>
+                    <h5>Programmer/Frontend</h5>
+                </div>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" required><br>
+                <div class="col profile">
+                    <div class="img-box">
+                        <img src="img/prof2.jpg" class="img">
+                    </div>
+                    <h2>Neris Luke Rodrigo</h2>
+                    <h3>Group Member</h3>
+                    <h5>Programmer/Backend</h5>
+                </div>
 
-        <button type="button" onclick="login()" id="loginButton">Login</button>
-    </form>
+                <div class="col profile">
+                    <div class="img-box">
+                        <img src="img/prof3.jpg" class="img">
+                    </div>
+                    <h2>Marvin Manzo jr.</h2>
+                    <h3>Group Member</h3>
+                    <h5>Designer</h5>
+                </div>
 
-    <p id="message"></p>
+                <div class="col profile">
+                    <div class="img-box">
+                        <img src="/img/prof4.jpg" class="img">
+                    </div>
+                    <h2>Carl Jarrenz Peralta</h2>
+                    <h3>Group Member</h3>
+                    <h5>Programmer Game</h5>
+                </div>
 
-    <script>
-        let attempts = 3;
-        let lockoutTime = 60; // in seconds
-        let locked = false;
-        let countdown;
-        let loginButton = document.getElementById('loginButton');
+                <div class="col profile">
+                    <div class="img-box">
+                        <img src="img/prof5.jpg" class="img">
+                    </div>
+                    <h2>Rome Ivan Bagulbagul</h2>
+                    <h3>Group Member</h3>
+                    <h5>Programmer Game</h5>
+                </div>
 
-        function login() {
-            if (locked) {
-                showMessage(`Account locked. Please try again after ${lockoutTime} seconds.`);
-                startCountdown();
-                return;
-            }
+                <div class="col profile">
+                    <div class="img-box">
+                        <img src="/img/prof1.jpg" class="img">
+                    </div>
+                    <h2>Jovani Tano</h2>
+                    <h3>Group Member</h3>
+                    <h5>Programmer Game</h5>
+                </div>
 
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            // Check username and password (replace this with your authentication logic)
-            if (username === 'Kertz' && password === 'kertz') {
-                window.alert('Login successful!');
-            } else {
-                attempts--;
-
-                if (attempts === 0) {
-                    locked = true;
-                    startCountdown();
-                    loginButton.style.display = 'none'; // Hide the button when locked
-                }
-
-                window.alert(`Incorrect credentials. ${attempts} attempts left.`);
-            }
-        }
-
-        function showMessage(message) {
-            document.getElementById('message').innerText = message;
-        }
-
-        function startCountdown() {
-            countdown = lockoutTime;
-            const countdownInterval = setInterval(() => {
-                showMessage(`Account locked. Please try again after ${countdown} seconds.`);
-                countdown--;
-
-                if (countdown < 0) {
-                    locked = false;
-                    attempts = 3;
-                    window.alert('Account unlocked. You can try again.');
-                    clearInterval(countdownInterval);
-                    loginButton.style.display = 'block'; // Bring back the button when unlocked
-                }
-            }, 1000);
-        }
-    </script>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

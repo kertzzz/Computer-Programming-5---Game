@@ -1,4 +1,6 @@
 body {
+    flex-wrap: wrap;
+    justify-content: baseline;
     display: flex;
     padding: 0%;
     margin: 0;
@@ -9,13 +11,35 @@ body {
     background-position: center;
 }
 
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .team {
     margin: 75px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 60%;
+    text-align: center;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 300px;
+}
+
+.col {
+    text-align: center;
 }
 
 h1 {
+    display: block;
     font-size: 35px;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
     font-weight: bold;
     letter-spacing: 2px;
     color: white;
@@ -36,13 +60,12 @@ h3, h2, h5 {
 }
 
 .profile {
-    margin-top: 25px;
-}
-
-.profile .img-box{
-    opacity: 1;
-    display: block;
-    position: relative;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 130%;
+    height: 100%; 
 }
 
 .profile h2 {
@@ -56,3 +79,19 @@ h3, h2, h5 {
     font-weight: bold;
     margin-top: 15px;
 }
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.img-box {
+    overflow: hidden;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
