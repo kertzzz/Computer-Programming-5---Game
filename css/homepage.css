@@ -5,8 +5,7 @@ body {
     min-height: 100vh;
     justify-content: left;
     align-items: center;
-    background: url('homepagebg.webp');
-    background-repeat: no-repeat;
+    background: url(/img/bg\ natin.gif) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -32,7 +31,7 @@ header {
     border-radius: 6px;
     cursor: pointer;
     font-weight: 500;
-    margin-left: 50px;
+    margin-left: 70vh;
     transition: .5s;
     display: flexbox;
     color: white;
@@ -69,11 +68,46 @@ header {
     align-items: flex-start;
     padding-left: 100px;
 }
-.contain label {
+
+.contain input {
     position: relative;
-    color: white;
-    font-size: 32px;
-    padding: 20px 0 20px 20px;
-    text-decoration: none;
-    opacity: 0;
+    color: rgb(206, 158, 14);
+    font-size: 37px;
+    padding: 90px 0 80px;
+    margin-left: 45px;
+    background: transparent;
+    border: none;
+    transition: .5s;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+
+.contain input:hover {
+    scale: 1.4;
+    transform: translate(8px, -10px);
+}
+
+.Tutorial {
+    background-color: antiquewhite;
+    height: 75vh;
+    width: 120vh;
+    display: flex;
+    position: absolute;
+    margin-left: 60vh;
+    opacity: 1;
+    justify-content: center;
+    box-shadow: 0 0 30px black;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .4s ease-in;
+}
+
+.Tutorial.active {
+    transform: scale(1);
+}
+
+.Tutorial.active {
+    height: 18cm;
+    width: 14cm;
+    top: 30px;
 }

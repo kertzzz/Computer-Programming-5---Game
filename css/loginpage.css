@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background: url(loginbg.webp) no-repeat;
+    background: url(/img/bf.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -76,7 +76,7 @@ header {
     height: 15cm;
     width: 12cm;
     border: 2px solid rgb(158, 156, 156);
-    backdrop-filter: blur(13px);
+    backdrop-filter: blur(20px);
     background: transparent;
     border-radius: 15px;
     justify-content: center;
@@ -85,31 +85,13 @@ header {
     box-shadow: 0 0 30px black;
     overflow: hidden;
     transform: scale(0);
-    transition: transform .4s ease, height .2s ease;
+    transition: transform .4s ease;
 }
 
 .main.active-login {
     transform: scale(1);
 }
 
-.main .form.login {
-    transition: transform .18s ease;
-    transform: translateX(0);
-}
-.main.main.active .form.login {
-    transition: none;
-    transform: translateX(-500px);
-}
-.main .form.signin {
-    position: absolute;
-    transition: none;
-    transform: translateX(500px);
-}
-
-.main.active .form.signin {
-    transition: transform .18s ease;
-    transform: translateX(0);
-}
 .main.active {
     height: 18cm;
     width: 14cm;

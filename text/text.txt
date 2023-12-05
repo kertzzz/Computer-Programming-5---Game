@@ -258,3 +258,40 @@ form label {
     pointer-events: none;
     transition: .5s;
 }
+
+
+
+
+
+// how to create a pacman javascript?
+
+
+let pacmanX = 0;
+let pacmanY = 0;
+
+function movePacman() {
+    pacmanX += 10; // Move pacman 10 pixels to the right
+    document.getElementById('pacman').style.left = pacmanX + 'px';
+}
+
+setInterval(movePacman, 100); // Call movePacman every 100 milliseconds
+
+let ghost1X = 0;
+let ghost1Y = 0;
+
+let ghost2X = 0;
+let ghost2Y = 0;
+
+function moveGhost1() {
+    ghost1X += 5; // Move ghost1 5 pixels to the right
+    document.getElementById('ghost1').style.left = ghost1X + 'px';
+}
+
+function moveGhost2() {
+    ghost2X += 5; // Move ghost2 5 pixels to the right
+    document.getElementById('ghost2').style.left = ghost2X + 'px';
+}
+
+setInterval(moveGhost1, 100); // Call moveGhost1 every 100 milliseconds
+setInterval(moveGhost2, 100); // Call moveGhost2 every 100 milliseconds
+

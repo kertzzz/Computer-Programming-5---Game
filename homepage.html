@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pacman Homepage</title>
-    <link rel="Stylesheet" href="homepage.css">
-    <script src="hp.js" defer></script>
-    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="Stylesheet" href="/css/homepage.css">
+    <script src="/js/code.js" defer></script>
+    <link rel="icon" href="/img/gamelogo.png" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -18,15 +18,13 @@
 
     <div class="main">
         <div class="contain">
+            <div class="Tutorial">
+                <h1>Tutorial</h1>
+            </div>
             <nav>
-            <input type="button" class="btn">
-                <label>Play</label>
-
-            <input type="button" class="btn">
-                <label>Tutorial</label>
-
-            <input type="button" class="btn">
-                <label>Settings</label>
+            <input type="button" value="Play" class="btn" onclick="Play()">
+            <input type="button" value="Tutorial" class="tutbtn">
+            <input type="button" value="Settings" class="btn" onclick="Settings()">
             </nav>
         </div>
     </div>

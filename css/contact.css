@@ -5,7 +5,11 @@ body {
     min-height: 100vh;
     justify-content: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background: url(profilebg.webp) no-repeat;
+    background: url(/img/profilebg.webp) no-repeat;
     background-size: cover;
     background-position: center;
+}
+p {
+    font-size: 50px;
+    color: white;
 }

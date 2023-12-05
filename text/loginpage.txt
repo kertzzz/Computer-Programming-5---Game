@@ -1,0 +1,102 @@
+<div class="form signin">
+            <h1>Create an Account</h1>
+
+          <form action="#">
+
+            <div class="txt_input" id="input">
+                <input type="text" required id="user" name="email">
+                <span></span>
+                <label>Email</label>
+            </div>
+
+            <div class="txt_input" id="input">
+                <input type="text" required id="user" name="username">
+                <span></span>
+                <label>Username</label>
+            </div>
+
+            <div class="txt_input" id="input">
+                <input type="password" required id="user" name="password">
+                <span></span>
+                <label>Password</label>
+            </div>
+                
+            <div class="txt_input" id="input">
+                <input type="password" required id="pass" name="password">
+                <span></span>
+                <label>Confirm Password</label>
+            </div>
+
+            <div class="box">
+                <input type="checkbox" id="box"> I accept the
+                <a href="#">Terms and Condition</a> and <a href="#">Policy and Privacy</a>
+            </div>
+
+            <input type="button" value="Submit" id="btn" onclick="enter()">
+
+            <div class="loginbtn">
+                <label>Already have an account?</label>
+                    <a href="#" class="login-link">Login</a>
+            </div>
+
+            </div>
+          </form>
+
+
+css
+
+, height .2s ease
+
+.main .form.login {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+.main.main.active .form.login {
+    transition: none;
+    transform: translateX(-500px);
+}
+
+
+.main .form.signin {
+    position: absolute;
+    transition: none;
+    transform: translateX(500px);
+}
+
+.main.active .form.signin {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.main.main.active .form.login {
+    transition: none;
+    transform: translateX(-500px);
+}
+
+
+
+js
+const signuplink = document.querySelector('.signup-link');
+const loginlink = document.querySelector('.login-link');
+
+
+loginlink.addEventListener('click', ()=> {
+    main.classList.remove('active');
+});
+
+
+pass.addEventListener('keyup', (e) => {
+    if(e.keyCode === 13){
+        window.location.href="homepage.html";
+    }
+});
+
+
+
+signuplink.addEventListener('click', ()=> {
+    main.classList.add('active');
+});
+
+var entrycount = 0;
+var timer = 59;
+var countdown = document.getElementById('btn');
