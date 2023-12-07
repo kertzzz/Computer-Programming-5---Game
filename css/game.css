@@ -27,8 +27,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url(/img/profilebg.webp);
-    
+    background-image: url(/img/pacman-background.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    background-position: center;
 }
 
 a { 

@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background: url(/img/bf.jpg) no-repeat;
+    background: url(/img/bgpacman.jpeg) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -75,14 +75,14 @@ header {
     position: relative;
     height: 15cm;
     width: 12cm;
-    border: 2px solid rgb(158, 156, 156);
+    border: 2px solid rgb(156, 157, 158);
     backdrop-filter: blur(20px);
     background: transparent;
     border-radius: 15px;
     justify-content: center;
     align-items: center;
     display: flex;
-    box-shadow: 0 0 30px black;
+    box-shadow: 0 0 100px rgb(47, 227, 233);
     overflow: hidden;
     transform: scale(0);
     transition: transform .4s ease;
@@ -213,12 +213,12 @@ p {
 
 .forgotp {
     margin: -5px 0 20px 5px;
-    color: #a6a6a6;
+    color: #b0c6df;
     cursor: pointer;
 }
 
 .forgotp a {
-    color: #c0bfbf;
+    color: #b0c6df;
     text-decoration: none;
 }
 
@@ -230,17 +230,17 @@ input[type="button"] {
     width: 100%;
     height: 50px;
     border: 1px solid;
-    background: #c7c8c9;
+    background: #87a3c2;
     border-radius: 18px;
     font-size: 18px;
-    color: #e9f4fb;
+    color: #ffffff;
     font-weight: 700;
     cursor: pointer;
     outline: none;
 }
 
 input[type="button"]:hover {
-    border-color:  #ffffff;
+    border-color:  #5393e1;
     transition: .5s;
 }
 
@@ -252,7 +252,7 @@ input[type="button"]:hover {
 }
 
 .signup a {
-    color: #c0bfbf;
+    color: #b0c6df;
     text-decoration: none;
 }
 

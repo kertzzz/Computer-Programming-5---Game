@@ -5,7 +5,7 @@ body {
     min-height: 100vh;
     justify-content: left;
     align-items: center;
-    background: url(/img/bg\ natin.gif) no-repeat;
+    background: url(/img/loginbg.gif) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -88,7 +88,7 @@ header {
 }
 
 .Tutorial {
-    background-color: antiquewhite;
+    background-color: rgb(226, 175, 107);
     height: 75vh;
     width: 120vh;
     display: flex;
@@ -102,12 +102,16 @@ header {
     transition: transform .4s ease-in;
 }
 
-.Tutorial.active {
-    transform: scale(1);
+.main .active-Tutorial {
+    transform: scale(0);
 }
 
-.Tutorial.active {
+.main.active {
     height: 18cm;
     width: 14cm;
     top: 30px;
+}
+
+.main .contain {
+    width: 100%;
 }

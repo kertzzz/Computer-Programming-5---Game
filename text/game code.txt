@@ -452,3 +452,7 @@ window.Modernizr = function(i,e,I)
                 
                 return j
             }(this,this.document);
+
+
+            <script src="/js/pacman.js"></script>
+  <script src="/js/modernizr-1.5.min.js"></script>

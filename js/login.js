@@ -21,7 +21,7 @@ showpass.addEventListener("click", function() {
 
 /* Login Account */
 let attempts = 0;
-let locktime = 10; 
+let locktime = 59; 
 let locked = false;
 let countdown;
 let button = document.getElementById('btn');
@@ -39,6 +39,11 @@ const password = document.getElementById('password').value;
     if (user === 'Kertz' && password === 'kertz1234') {
         window.location.href="homepage.html";
 
+    }
+    
+    else if (user === 'Luke' && password === 'Luke504') {
+        window.location.href="homepage.html";
+
     } else {
         attempts++;
 
@@ -51,13 +56,14 @@ const password = document.getElementById('password').value;
     }
 }
 
+/* 1min Countdown  */
 function startCountdown() {
     countdown = locktime;
     const countdownInterval = setInterval(() => {
         showMessage(`Login locked. Please try again after ${countdown} seconds.`);
         countdown--;
 
-        if (countdown < 0) {
+        if (countdown < 0) {n
             locked = false;
             attempts = 0;
             clearInterval(countdownInterval);
