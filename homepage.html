@@ -3,27 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pacman Homepage</title>
+    <title>Pacman</title>
     <link rel="Stylesheet" href="/css/homepage.css">
     <script src="/js/homepage.js" defer></script>
     <link rel="icon" href="/img/gamelogo.png" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <img src="">
-        <nav class="navi">
-            <button class="btn">Profile</button>
-        </nav>    
-    </header>
 
     <div class="main">
         <div class="contain">
             <nav>
             <input type="button" value="Play" class="btn" onclick="Play()">
-            <input type="button" value="Tutorial" class="tutbtn">
+            <input type="button" value="Tutorial" class="btn" onclick="Tutorial()">
             <input type="button" value="Settings" class="btn" onclick="Settings()">
             </nav>
-                <div class="Tutorial">
+                <div class="Tutorial" id="tut">
                     <h1>Tutorial</h1>
                 </div>
         </div>

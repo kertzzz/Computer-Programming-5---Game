@@ -56,14 +56,14 @@ const password = document.getElementById('password').value;
     }
 }
 
-/* 1min Countdown  */
+/* Countdown */
 function startCountdown() {
     countdown = locktime;
     const countdownInterval = setInterval(() => {
         showMessage(`Login locked. Please try again after ${countdown} seconds.`);
         countdown--;
 
-        if (countdown < 0) {n
+        if (countdown < 0) {
             locked = false;
             attempts = 0;
             clearInterval(countdownInterval);

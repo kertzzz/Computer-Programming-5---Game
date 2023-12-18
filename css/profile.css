@@ -106,7 +106,12 @@ h3, h2, h5 {
     margin: 0 auto;
 }
 
+.profile i {
+    opacity: 0;
+
+}
 .profile:hover i {
+    opacity: 1;
     color: white;
     padding-left: 40px;
     margin-right: 40px;

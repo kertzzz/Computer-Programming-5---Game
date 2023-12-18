@@ -4,9 +4,11 @@ function Play() {
 }
 
 /* Tutorial */
-const main = document.querySelector('.main');
-const btn = document.querySelector('.tutbtn');
-
-btn.addEventListener('click', ()=> {
-    main.classList.add('active-Tutorial');
-});
+function Tutorial() {
+  var tutorialDiv = document.getElementById("tut");
+  if (tutorialDiv.style.display === "none") {
+      tutorialDiv.style.display = "block";
+  } else {
+      tutorialDiv.style.display = "none";
+  }
+}

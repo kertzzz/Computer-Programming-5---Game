@@ -27,7 +27,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url(/img/pacman-background.jpg);
+    background-image: url(/img/);
     background-size: cover;
     min-height: 100vh;
     background-position: center;

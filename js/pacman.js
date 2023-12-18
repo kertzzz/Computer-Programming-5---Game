@@ -11,7 +11,7 @@ var NONE        = 4,
     DYING       = 10,
     Pacman      = {};
 
-Pacman.FPS = 30;
+Pacman.FPS = 25;
 
 Pacman.Ghost = function (game, map, colour) {
 
@@ -823,7 +823,7 @@ var PACMAN = (function () {
     }
 
     function keyDown(e) {
-        if (e.keyCode === KEY.N) {
+        if (e.keyCode === KEY.ENTER) {
             startNewGame();
         } else if (e.keyCode === KEY.S) {
             audio.disableSound();
@@ -958,7 +958,7 @@ var PACMAN = (function () {
         } else if (state === WAITING && stateChanged) {            
             stateChanged = false;
             map.draw(ctx);
-            dialog("Press N to start a New game");            
+            dialog("Press ENTER to start a New game");            
         } else if (state === EATEN_PAUSE && 
                    (tick - timerStart) > (Pacman.FPS / 3)) {
             map.draw(ctx);
@@ -1071,7 +1071,7 @@ var PACMAN = (function () {
         
     function loaded() {
 
-        dialog("Press N to Start");
+        dialog("Press ENTER to Start");
         
         document.addEventListener("keydown", keyDown, true);
         document.addEventListener("keypress", keyPress, true); 
@@ -1135,7 +1135,7 @@ Pacman.MAP = [
 	[0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0],
 	[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0],
 	[0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 ];
 
 Pacman.WALLS = [
